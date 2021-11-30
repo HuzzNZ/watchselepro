@@ -1,13 +1,17 @@
 # Dockerfile
 
 # base image
-FROM node:slim
+FROM node:alpine
 
 # create & set working directory
 RUN mkdir -p /usr/watchselepro
 WORKDIR /usr/watchselepro
 
+# set port environment variable
 ENV PORT = 3000
+
+# install pm2
+RUN npm install --global pm2
 
 # copy source files
 COPY . /usr/watchselepro
@@ -15,7 +19,13 @@ COPY . /usr/watchselepro
 # install dependencies
 RUN npm install
 
-# start app
+# build app
 RUN npm run build
+
+# expose port
 EXPOSE 3000
-CMD npm run start
+
+USER node
+
+# start app with pm2
+CMD [ "pm2-runtime", "npm", "--", "run", "start" ]
