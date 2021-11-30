@@ -1,0 +1,4 @@
+public/episodes/*
+.git
+.idea
+.gitignore

@@ -42,3 +42,24 @@ body {
 .plyr__captions {
     margin-bottom: 6px !important;
 }
+
+h1 {
+    @apply text-3xl font-bold
+}
+
+h2 {
+    @apply text-2xl font-bold
+}
+
+.chromatic {
+    color: #fe58a2;
+    text-shadow: -2px 0 0 #8ffbff, 2px 0 0 #ffea01;
+}
+
+.chromatic {
+    @apply uppercase
+}
+
+.link {
+    @apply hover:underline text-red-500 hover:cursor-pointer
+}
