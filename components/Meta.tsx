@@ -12,7 +12,7 @@ interface MetaProps {
 const Meta: React.FC<MetaProps> = ({ page, title, desc, image }) => {
     const baseURL = "https://watchselepro.com"
     const tagImage = image || "/banner_embed.jpg"
-    const tagTitle = `Watch Selection Project${title? ` - ${title}` : null}`
+    const tagTitle = `Watch Selection Project${title? ` - ${title}` : ""}`
     const tagDesc = desc || "Held every summer, the national idol audition reality show \'Selection Project\' is said to be the biggest gateway to success for aspiring idols."
     return (
         <Head>
