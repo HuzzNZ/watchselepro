@@ -31,7 +31,7 @@ const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
                     <SideButton icon={"ph:thumbs-up-fill"}
                                 title={nextEpisode? "Liked the episode?" : "Liked the series?"}
                                 subtitle={nextEpisode? "Consider continuing watching on your local streaming service, or buying the BD/DVD set!" : "Consider buying the BD/DVD sets, or Selection Project merchandise to support the franchise!"}
-                                href={"#"} truncate={false}/>
+                                href={"/guides"} truncate={false}/>
                 </div>
             </div>
         </div>

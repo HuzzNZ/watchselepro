@@ -1,8 +1,26 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Header from "../components/Header";
+import {useRouter} from "next/router";
+import {useEffect} from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const router = useRouter();
+
+    const handleRouteChange = (url: string) => {
+        // @ts-ignore
+        window.gtag('config', '[Tracking ID]', {
+            page_path: url,
+        });
+    };
+
+    useEffect(() => {
+        router.events.on('routeChangeComplete', handleRouteChange);
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, [router.events]);
+
     return (
         <div className={'w-full'}>
             <Header/>

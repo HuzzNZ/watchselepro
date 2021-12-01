@@ -44,11 +44,11 @@ body {
 }
 
 h1 {
-    @apply text-3xl font-bold
+    @apply text-3xl font-bold mb-4
 }
 
 h2 {
-    @apply text-2xl font-bold
+    @apply text-2xl font-bold mb-2 mt-6
 }
 
 .chromatic {
@@ -62,4 +62,8 @@ h2 {
 
 .link {
     @apply hover:underline text-red-500 hover:cursor-pointer
+}
+
+.body-paragraph {
+    @apply italic font-light text-lg tracking-wide mb-2
 }
