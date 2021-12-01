@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import Header from "../components/Header";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
+import Meta from "../components/Meta";
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <div className={'w-full'}>
+            <Meta/>
             <Header/>
             <div className={'w-full h-20'}>
 

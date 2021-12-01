@@ -1,13 +1,15 @@
 import React from "react";
 import SideButton from "../../components/SideButton";
 import Image from "next/image";
+import Meta from "../../components/Meta";
 
 const Guides: React.FC = () => {
     return (
         <div>
+            <Meta title={"Guides"} page={"/guides"} desc={"A guide on how to watch Selection Project legally, as well as purchasing official merchandise!"}/>
             <h1>Streaming & Official Merchandise Guide</h1>
             <p className={"body-paragraph"}>
-                We highly encourage you to support the franchise by either streaming Selection Project legally, or by purchasing Selection Project official merchandise. Keep reading if you want to know more!
+                Even though you can watch Selection Project on this website, we highly encourage you to support the franchise by either streaming Selection Project legally, or by purchasing Selection Project official merchandise. Keep reading if you want to know more!
             </p>
             <h2>Legal Streaming</h2>
             <div className={"flex-row flex space-x-6"}>

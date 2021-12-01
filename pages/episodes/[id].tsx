@@ -4,6 +4,7 @@ import React from "react";
 import PlyrComponent from "../../components/PlyrComponent";
 import SideButton from "../../components/SideButton";
 import {getUTCReleaseDate} from "../../tools/time";
+import Meta from "../../components/Meta";
 
 interface EpisodePageProps {
     episode: Episode
@@ -14,6 +15,7 @@ const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
     const nextEpisode = episode.id === maxEpisodes? null : episodes.find(obj => { return obj.id === (episode.id + 1) })
     return (
         <div className={'space-y-4'}>
+            <Meta page={`/episodes/${episode.id}`} title={`Episode ${episode.id}`} image={`/episodes/${episode.id}/thumbnail_m.jpg`} desc={episode.titleRom}/>
             <PlyrComponent episode={episode.id}/>
             <div className={'flex flex-row'}>
                 <div className={'flex-grow'}>
@@ -28,10 +30,7 @@ const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
                     {nextEpisode ? <SideButton
                         icon={"ph:arrow-circle-right-fill"} title={"Next: Episode " + nextEpisode.id} subtitle={nextEpisode.titleRom} href={"/episodes/[id]"} as={`/episodes/${nextEpisode.id}`} truncate={true} important={true}/> : null}
                     <SideButton icon={"ph:film-strip-bold"} title={"View all episodes"} href={"/episodes"}/>
-                    <SideButton icon={"ph:thumbs-up-fill"}
-                                title={nextEpisode? "Liked the episode?" : "Liked the series?"}
-                                subtitle={nextEpisode? "Consider continuing watching on your local streaming service, or buying the BD/DVD set!" : "Consider buying the BD/DVD sets, or Selection Project merchandise to support the franchise!"}
-                                href={"/guides"} truncate={false}/>
+                    <SideButton icon={"ph:thumbs-up-fill"} title={nextEpisode? "Liked the episode?" : "Liked the series?"} subtitle={nextEpisode? "Consider continuing watching on your local streaming service, or buying the BD/DVD set!" : "Consider buying the BD/DVD sets, or Selection Project merchandise to support the franchise!"} href={"/guides"} truncate={false}/>
                 </div>
             </div>
         </div>
