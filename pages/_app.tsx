@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <div className={'w-full'}>
-            <Meta/>
+            <Meta page={""}/>
             <Header/>
             <div className={'w-full h-20'}>
 
