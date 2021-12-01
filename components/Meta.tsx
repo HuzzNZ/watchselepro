@@ -11,9 +11,9 @@ interface MetaProps {
 
 const Meta: React.FC<MetaProps> = ({ page, title, desc, image }) => {
     const baseURL = "https://watchselepro.com"
-    const tagImage = image || "/banner.jpg"
+    const tagImage = image || "/banner_embed.jpg"
     const tagTitle = `Watch Selection Project${title? ` - ${title}` : null}`
-    const tagDesc = desc || "Held every summer, the national idol audition reality show “SELECTION PROJECT” is said to be the biggest gateway to success for aspiring idols."
+    const tagDesc = desc || "Held every summer, the national idol audition reality show \'Selection Project\' is said to be the biggest gateway to success for aspiring idols."
     return (
         <Head>
             <title>{tagTitle}</title>
@@ -29,7 +29,6 @@ const Meta: React.FC<MetaProps> = ({ page, title, desc, image }) => {
             <meta property="og:type" content="website" key={"og-type"} />
             <meta property="og:title" content={tagTitle} key={"og-title"} />
             <meta property="og:description" content={tagDesc} key={"og-desc"} />
-            <meta property="og:site_name" content="watchselepro.com" key={"og-site"} />
             <meta property="og:image" content={`${baseURL}${tagImage}`} key={"og-image"} />
             <meta property="og:url" content={`${baseURL}${page}`} key={"og-url"} />
 
@@ -37,7 +36,6 @@ const Meta: React.FC<MetaProps> = ({ page, title, desc, image }) => {
             <meta property="twitter:title" content={tagTitle} key={"twitter-title"} />
             <meta property="twitter:description" content={tagDesc} key={"twitter-desc"} />
             <meta property="twitter:image" content={`${baseURL}${tagImage}`} key={"twitter-image"} />
-            <meta property="twitter:image:alt" content="Selection Project Banner Image" key={"twitter-image-alt"} />
         </Head>
     )
 }

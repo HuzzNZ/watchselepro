@@ -15,7 +15,7 @@ const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
     const nextEpisode = episode.id === maxEpisodes? null : episodes.find(obj => { return obj.id === (episode.id + 1) })
     return (
         <div className={'space-y-4'}>
-            <Meta page={`/episodes/${episode.id}`} title={`Episode ${episode.id}`} image={`/episodes/${episode.id}/thumbnail_m.jpg`} desc={episode.titleRom}/>
+            <Meta page={`/episodes/${episode.id}`} title={`Episode ${episode.id}`} image={`/episodes/${episode.id}/thumbnail_s.jpg`} desc={episode.titleRom}/>
             <PlyrComponent episode={episode.id}/>
             <div className={'flex flex-row'}>
                 <div className={'flex-grow'}>

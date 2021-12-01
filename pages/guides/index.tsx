@@ -41,10 +41,10 @@ const Guides: React.FC = () => {
                 </div>
                 <div className={"flex-grow"}>
                     <p className={"body-paragraph"}>
-                        <b>CDJapan</b> has a very extensive listing of all the Selection Project merchandise! Whether it's the CDs, BD/DVDs, Shirts, Badges, Keychains, Shirts... They have all of it! They offer fast shipping straight from Japan, and have been very reliable.
+                        <b>CDJapan</b> has a very extensive listing of all the Selection Project merchandise! Whether it&apos;s the CDs, BD/DVDs, Shirts, Badges, Keychains, Shirts... They have all of it! They offer fast shipping straight from Japan, and have been very reliable.
                     </p>
                     <p className={"body-paragraph"}>
-                        <b>Amazon.jp</b> also has a wide range of Selection Project merch. However, the shipping information varies per country, so it's best that you check if they can deliver to your country on Amazon.jp.
+                        <b>Amazon.jp</b> also has a wide range of Selection Project merch. However, the shipping information varies per country, so it&apos;s best that you check if they can deliver to your country on Amazon.jp.
                     </p>
                 </div>
             </div>

@@ -4,14 +4,15 @@ import Header from "../components/Header";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import Meta from "../components/Meta";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
 
     const handleRouteChange = (url: string) => {
         // @ts-ignore
-        window.gtag('config', '[Tracking ID]', {
-            page_path: url,
+        window.gtag('config', 'G-PMG9HME0S4', {
+            page_path: url
         });
     };
 
@@ -24,6 +25,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <div className={'w-full'}>
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-PMG9HME0S4"/>
+            <Script strategy="afterInteractive" id={"Google Analytics"} dangerouslySetInnerHTML={{ __html:`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-PMG9HME0S4');`
+            }}/>
             <Meta page={""}/>
             <Header/>
             <div className={'w-full h-20'}>

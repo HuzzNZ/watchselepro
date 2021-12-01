@@ -10,7 +10,7 @@ import Meta from "../components/Meta";
 const Home: NextPage = () => {
     return (
         <div className={"space-y-8"}>
-            <Meta title={"Home"} page={""}/>
+            <Meta page={""}/>
             <div className={'w-full h-112 relative'}>
                 <Image alt={"Selection Project Banner"} className={"rounded-2xl"} src={"/banner.jpg"} layout={"fill"} objectFit={"cover"} priority={true}/>
                 <div className={"w-full h-full bg-opacity-50 bg-gradient-to-t from-black-transparent via-transparent absolute rounded-2xl flex flex-col-reverse py-10 px-12"}>
