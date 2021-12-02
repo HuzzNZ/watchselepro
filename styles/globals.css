@@ -67,3 +67,13 @@ h2 {
 .body-paragraph {
     @apply italic font-light text-lg tracking-wide mb-2
 }
+
+.backdrop-blur {
+    @apply bg-opacity-90
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .backdrop-blur {
+        @apply bg-opacity-50 backdrop-blur-2xl
+    }
+}

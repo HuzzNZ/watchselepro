@@ -5,6 +5,7 @@ import {useRouter} from "next/router";
 import {useEffect} from "react";
 import Meta from "../components/Meta";
 import Script from "next/script";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
@@ -33,10 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                     gtag('config', 'G-PMG9HME0S4');`
             }}/>
             <Meta page={""}/>
+            <Head>
+                <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+            </Head>
             <Header/>
-            <div className={'w-full h-20'}>
-
-            </div>
+            <div className={'w-full md:h-20 h-14'} />
             <div className={'my-8 w-full flex justify-center'}>
                 <div className={'lg:w-248 lg:px-0 w-full px-4'}>
                     <Component {...pageProps} />
