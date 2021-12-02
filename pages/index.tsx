@@ -11,11 +11,8 @@ const Home: NextPage = () => {
     return (
         <div className={"space-y-8"}>
             <Meta page={""}/>
-            <div className={'w-full h-112 relative'}>
-                <Image alt={"Selection Project Banner"} className={"rounded-2xl"} src={"/banner.jpg"} layout={"fill"} objectFit={"cover"} priority={true}/>
-                <div className={"w-full h-full bg-opacity-50 bg-gradient-to-t from-black-transparent via-transparent absolute rounded-2xl flex flex-col-reverse py-10 px-12"}>
-                    <p className={'text-4xl italic font-bold text-white'}>So you clicked on this website...</p>
-                </div>
+            <div className={'w-full relative'}>
+                <Image alt={"Selection Project Banner"} className={"rounded-2xl"} src={"/banner_embed.jpg"} layout={"responsive"} width={1500} height={688} priority={true}/>
             </div>
             <div className={"space-y-4"}>
                 <h1>It&apos;s time to give <span className={"chromatic italic tracking-wide font-normal mx-1"}>Selection Project</span> a go!</h1>
@@ -25,8 +22,8 @@ const Home: NextPage = () => {
             </div>
             <div className={"space-y-4"}>
                 <h2>Watch Episode 1 now!</h2>
-                <div className={"flex flex-row space-x-6"}>
-                    <div className={"w-176 flex-none"}>
+                <div className={"flex lg:flex-row flex-col lg:space-x-6 lg:space-y-0 space-y-4"}>
+                    <div className={"lg:w-176 w-full flex-none"}>
                         <PlyrComponent episode={1}/>
                     </div>
                     <div className={"flex-grow space-y-4"}>
@@ -45,13 +42,13 @@ const Home: NextPage = () => {
                     The 9 finalists who won the preliminary rounds in <b>Hokkaido</b>, <b>Tohoku</b>, <b>North Kanto</b>, <b>South Kanto</b>, <b>Kansai</b>, <b>Chubu</b>, <b>Chuugoku</b>, <b>Shikoku</b>, and <b>Kyushu/Okinawa</b> will spend a month of their summer vacation living together in a special facility while they try to compete in an audition battle. The winner will be decided by the votes (&ldquo;yells&rdquo;) of the users watching the reality show and will debut as an idol.
                 </p>
             </div>
-            <div className={"w-full h-384 relative"}>
-                <Image alt={"Selection Project Key Visual"} className={"rounded-2xl"} src={"/visual.jpg"} layout={"fill"} objectFit={"cover"}/>
+            <div className={"w-full relative"}>
+                <Image alt={"Selection Project Key Visual"} className={"rounded-2xl"} src={"/visual.jpg"} width={1414} height={2000} layout={"responsive"}/>
             </div>
             <div className={"space-y-4"}>
                 <h2>Sounds good! How do I watch it?</h2>
-                <div className={"flex flex-row space-x-6"}>
-                    <div className={"w-72 flex-none space-y-4"}>
+                <div className={"flex md:flex-row flex-col md:space-x-6 md:space-y-0 space-y-4"}>
+                    <div className={"md:w-60 lg:w-72 flex-none space-y-4"}>
                         <SideButton icon={"ph:film-strip-bold"} title={"View all episodes"} subtitle={"Watch Selection Project here."} href={"/episodes"} important={true}/>
                         <SideButton icon={"ph:globe-fill"} title={"Streaming Services"} subtitle={"Find out how to watch Selection Project legally in your region!"} href={"/guides"}/>
                         <SideButton icon={"ph:shopping-cart-fill"} title={"Official Merchandise"} subtitle={"Find out how to get official merchandise overseas!"} href={"/guides"}/>

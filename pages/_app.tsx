@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
             </div>
             <div className={'my-8 w-full flex justify-center'}>
-                <div className={'w-256'}>
+                <div className={'lg:w-248 lg:px-0 w-full px-4'}>
                     <Component {...pageProps} />
                 </div>
             </div>

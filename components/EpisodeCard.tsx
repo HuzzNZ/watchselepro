@@ -20,12 +20,12 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
                 <div className={'relative h-18 w-32 rounded-lg bg-gray-200 flex-none'}>
                     <Image className={'rounded-lg'} alt={`Episode ${episode.id} Thumbnail`} src={`/episodes/${episode.id}/thumbnail_xs.jpg`} layout={"fill"} objectFit={"cover"}/>
                 </div>
-                <div className={'flex-grow text-left flex flex-row items-center'}>
-                    <div className={'flex-grow'}>
+                <div className={'flex-grow text-left flex flex-row items-center min-w-0'}>
+                    <div className={'flex-grow truncate'}>
                         <p className={"font-bold text-lg"}>Episode {episode.id}</p>
-                        <p className={"font-light italic text-md"}>
+                        <p className={"font-light italic text-md truncate w-full"}>
                             {episode.titleRom}
-                            {episode.titleNat? <span className={'ml-4 not-italic text-sm text-gray-400 transition-opacity duration-150 ' + (isHover? "opacity-100" : "opacity-0")}>{episode.titleNat}</span> : null}
+                            {episode.titleNat? <span className={'ml-4 not-italic text-sm text-gray-400 transition-opacity duration-150 md:inline hidden ' + (isHover? "opacity-100" : "opacity-0")}>{episode.titleNat}</span> : null}
                         </p>
                         <p className={"font-light text-sm text-gray-400"}>{getUTCReleaseDate(new Date(episode.releaseDate))}</p>
                     </div>

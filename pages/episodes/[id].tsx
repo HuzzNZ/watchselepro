@@ -17,16 +17,18 @@ const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
         <div className={'space-y-4'}>
             <Meta page={`/episodes/${episode.id}`} title={`Episode ${episode.id}`} image={`/episodes/${episode.id}/thumbnail_s.jpg`} desc={episode.titleRom}/>
             <PlyrComponent episode={episode.id}/>
-            <div className={'flex flex-row'}>
+            <div className={'flex lg:flex-row lg:space-y-0 flex-col space-y-4'}>
                 <div className={'flex-grow'}>
-                    <p className={'space-x-3 inline-flex items-center'}>
+                    <p className={'space-x-3 align-middle'}>
                         <span className={"font-bold text-2xl"}>Episode {episode.id}</span>
                         <span className={'italic font-light text-2xl'}>{episode.titleRom}</span>
-                        {nextEpisode? null : <span className={'text-sm uppercase font-light italic px-2 py-0.5 bg-red-500 text-white rounded-md'}>Latest Release</span>}
                     </p>
-                    <p className={'text-md font-light text-gray-400'}>{getUTCReleaseDate(new Date(episode.releaseDate))}</p>
+                    <p className={'inline-flex flex-row space-x-3 items-center'}>
+                        {nextEpisode? null : <span className={'text-sm uppercase font-light italic px-2 py-0.5 bg-red-500 text-white rounded-md'}>Latest</span>}
+                        <span className={'text-md font-light text-gray-400'}>{getUTCReleaseDate(new Date(episode.releaseDate))}</span>
+                    </p>
                 </div>
-                <div className={"w-72 flex-none space-y-4"}>
+                <div className={"lg:w-72 flex-none space-y-4"}>
                     {nextEpisode ? <SideButton
                         icon={"ph:arrow-circle-right-fill"} title={"Next: Episode " + nextEpisode.id} subtitle={nextEpisode.titleRom} href={"/episodes/[id]"} as={`/episodes/${nextEpisode.id}`} truncate={true} important={true}/> : null}
                     <SideButton icon={"ph:film-strip-bold"} title={"View all episodes"} href={"/episodes"}/>
