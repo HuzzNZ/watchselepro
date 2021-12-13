@@ -60,4 +60,16 @@ export const episodes: Episode[] = [
         titleNat: "貝殻の中の私",
         releaseDate: 1637931600000
     },
+    {
+        id: 10,
+        titleRom: "I Just Want to Sing",
+        titleNat: "ただ歌いたくて",
+        releaseDate: 1638536400000
+    },
+    {
+        id: 11,
+        titleRom: "One Little Step at a Time",
+        titleNat: "少しだけど　少しずつ",
+        releaseDate: 1639141200000
+    },
 ]

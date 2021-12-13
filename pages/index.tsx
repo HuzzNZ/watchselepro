@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                         <SideButton icon={"ph:arrow-circle-right-fill"} title={"Next: Episode 2"} subtitle={episodes[1].titleRom} href={"/episodes/[id]"} as={"/episodes/2"} truncate={true} important={true}/>
                         <SideButton icon={"ph:film-strip-bold"} title={"View all episodes"} href={"/episodes"}/>
                         <SideButton icon={"ph:youtube-logo-fill"} title={"In South East Asia?"} subtitle={"Watch Selection Project for free on YouTube @ Muse Asia!"} href={"https://youtube.com/playlist?list=PLwLSw1_eDZl2FRizEh6a46FMtDzXRUeXq"}/>
-                        <SideButton icon={"ph:thumbs-up-fill"} title={"Like what you're seeing?"} subtitle={"Consider continuing watching on your local streaming service!"} href={"#"}/>
+                        <SideButton icon={"ph:thumbs-up-fill"} title={"Like what you're seeing?"} subtitle={"Consider continuing watching on your local streaming service!"} href={"/guides"}/>
                     </div>
                 </div>
             </div>
