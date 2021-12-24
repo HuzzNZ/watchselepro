@@ -46,6 +46,9 @@ const Guides: React.FC = () => {
                     <p className={"body-paragraph"}>
                         <b>Amazon.jp</b> also has a wide range of Selection Project merch. However, the shipping information varies per country, so it&apos;s best that you check if they can deliver to your country on Amazon.jp.
                     </p>
+                    <p className={"body-paragraph"}>
+                        <b className={"uppercase"}>Disclaimer:</b> This website is not affiliated with any of these vendors.
+                    </p>
                 </div>
             </div>
         </div>

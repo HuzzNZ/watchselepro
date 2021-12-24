@@ -35,7 +35,7 @@ const Header: React.FC = () => {
     const buttons: HeaderButtonInterface[] = [
         { title: 'Episodes', icon: 'ph:film-strip-bold', link: "/episodes", isLocal: true },
         { title: 'Guides', icon: 'ph:article-fill', link: "/guides", isLocal: true },
-        { title: 'About Us', icon: 'ph:circle-wavy-fill', link: "#", isLocal: true },
+        { title: 'About Us', icon: 'ph:circle-wavy-fill', link: "/about", isLocal: true },
         { title: 'Twitter', icon: 'ph:twitter-logo-bold', link: "https://twitter.com/pj_selection", isLocal: false },
         { title: 'Website', icon: 'ph:link-simple-bold', link: "http://pjselection.com", isLocal: false },
     ]
