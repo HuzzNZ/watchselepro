@@ -12,7 +12,7 @@ interface EpisodePageProps {
 }
 
 const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
-    const nextEpisode = episode.id === maxEpisodes? null : episodes.find(obj => { return obj.id === (episode.id + 1) })
+    const nextEpisode = (episode.id === maxEpisodes? null : episodes.find(obj => { return obj.id === (episode.id + 1) })) || episode.final
     return (
         <div className={'space-y-4'}>
             <Meta page={`/episodes/${episode.id}`} title={`Episode ${episode.id}`} image={`/episodes/${episode.id}/thumbnail_small.jpg`} desc={episode.titleRom}/>

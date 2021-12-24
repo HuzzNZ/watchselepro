@@ -3,6 +3,7 @@ export interface Episode {
     titleRom: string,
     titleNat: string,
     releaseDate: number,
+    final?: boolean
 }
 
 export const episodes: Episode[] = [
@@ -72,4 +73,17 @@ export const episodes: Episode[] = [
         titleNat: "少しだけど　少しずつ",
         releaseDate: 1639141200000
     },
+    {
+        id: 12,
+        titleRom: "The Feelings We Want You To Know",
+        titleNat: "あなたに届けたい想い",
+        releaseDate: 1639746000000
+    },
+    {
+        id: 13,
+        titleRom: "Our Glorious Days",
+        titleNat: "",
+        releaseDate: 1640350800000,
+        final: true
+    }
 ]
