@@ -12,7 +12,8 @@ interface EpisodePageProps {
 }
 
 const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
-    const nextEpisode = (episode.id === maxEpisodes? null : episodes.find(obj => { return obj.id === (episode.id + 1) })) || episode.final
+    const nextEpisode = episode.id === maxEpisodes? null : episodes.find(obj => { return obj.id === (episode.id + 1) })
+    const isFinal = episode.final || false
     return (
         <div className={'space-y-4'}>
             <Meta page={`/episodes/${episode.id}`} title={`Episode ${episode.id}`} image={`/episodes/${episode.id}/thumbnail_small.jpg`} desc={episode.titleRom}/>
@@ -24,7 +25,7 @@ const EpisodePage: React.FC<EpisodePageProps> = ({ episode, maxEpisodes }) => {
                         <span className={'italic font-light text-2xl'}>{episode.titleRom}</span>
                     </p>
                     <p className={'inline-flex flex-row space-x-3 items-center'}>
-                        {nextEpisode? null : <span className={'text-sm uppercase font-light italic px-2 py-0.5 bg-red-500 text-white rounded-md'}>Latest</span>}
+                        {isFinal? null : (nextEpisode? null : <span className={'text-sm uppercase font-light italic px-2 py-0.5 bg-red-500 text-white rounded-md'}>Latest</span>)}
                         <span className={'text-md font-light text-gray-400'}>{getUTCReleaseDate(new Date(episode.releaseDate))}</span>
                     </p>
                 </div>
